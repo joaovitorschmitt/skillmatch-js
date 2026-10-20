@@ -20,9 +20,52 @@ habilidades: ["JavaScript", "Node.js", "SQL", "Git"],
 }
 ];
 
-const habilidadesEmComum = vagas[0].habilidades.filter(habilidade =>
-    candidato.habilidades.includes(habilidade)
-);
+const resultados = [];
+vagas.forEach(vaga => {
+    const habilidadesEmComum = vaga.habilidades.filter(habilidade =>
+        candidato.habilidades.includes(habilidade)
+        
+    );
 
-console.log(habilidadesEmComum);
+    const habilidadesFaltantes = vaga.habilidades.filter(habilidade =>
+        !candidato.habilidades.includes(habilidade)
+        
+    );
+
+    const porcentagem = (habilidadesEmComum.length / vaga.habilidades.length) * 100;
+    let classificacao = "";
+    if (porcentagem >= 80) {
+        classificacao = "Alta compatibilidade";
+    } else if (porcentagem >= 50) {
+        classificacao = "Compatibilidade média";
+    } else {
+        classificacao = "Baixa compatibilidade";
+    }
+
+    resultados.push({
+       nome: vaga.nome,
+       porcentagem: porcentagem,
+       habilidadesCompativeis: habilidadesEmComum.length,
+       totalHabilidades: vaga.habilidades.length,
+       habilidadesFaltantes: habilidadesFaltantes,
+       classificacao: classificacao 
+    });
+
+    });
+
+resultados.sort((a, b) => b.porcentagem - a.porcentagem);
+resultados.forEach(resultado => {
+    console.log("------------------------------");
+    console.log(`Vaga: ${resultado.nome}`);
+    console.log(`Compatibilidade: ${resultado.porcentagem}%`);
+    console.log(`Habilidades compatíveis: ${resultado.habilidadesCompativeis} de ${resultado.totalHabilidades}`);
+    console.log(`Classificação: ${resultado.classificacao}`);
+    if (resultado.habilidadesFaltantes.length > 0) {
+    console.log("Habilidades faltantes", resultado.habilidadesFaltantes);
+} else {
+    console.log("Habilidades faltantes: Nenhuma");
+}
+    console.log("------------------------------");
+})
+    
 
