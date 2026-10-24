@@ -20,3 +20,30 @@ A classificação das vagas em alta, média e baixa compatibilidade ajuda a orga
 ## Como executar o projeto
 
 Para executar o SkillMatch, é necessário ter o Node.js instalado no computador. Abra a pasta do projeto no VS Code e abra um terminal dentro da pasta `skillmatch-js`. Em seguida, execute o comando `node skillmatch.js` para ver os resultados da análise de compatibilidade no terminal.
+
+## Conceitos de JavaScript utilizados
+
+**Classes e objetos:** a classe Candidato representa o perfil do candidato.
+**Herança:** a classe CandidatoFrontEnd herda características de Candidato usando extends e super.
+**Callback:** a função processarVagas recebe outra função como parâmetro para processar as vagas.
+**Closure:** a função criarContadorVagas mantém um contador interno que aumenta a cada chamada.
+**Métodos de arrays:** filter identifica habilidades compatíveis e faltantes; find encontra a melhor vaga; reduce reúne e conta as habilidades faltantes.
+**Promise e async/await:** simulam o carregamento assíncrono das vagas.
+**Tratamento de erros:** try/catch captura falhas durante o carregamento das vagas.
+**this:** acessa os atributos do objeto candidato dentro da classe.
+
+## Como funciona a recomendação de estudo
+
+O programa reúne as habilidades que faltam nas vagas e conta quantas vezes cada habilidade aparece. A habilidade faltante mais frequente é priorizada para a recomendação de estudo. Assim, o candidato consegue identificar qual conhecimento pode ajudar a se preparar para mais oportunidades.
+
+## Simulação da arquitetura cliente-servidor
+
+O projeto simula o carregamento de vagas como se os dados viessem de um servidor. A função carregarVagas() utiliza Promise e setTimeout() para representar o tempo de resposta. A função iniciarSkillMatch() utiliza async/await para aguardar o carregamento antes de iniciar a análise. O tratamento de erros com try/catch permite informar quando o carregamento falha.
+
+Esta é uma simulação local: o projeto não utiliza uma API externa nem possui um servidor real.
+
+## Ferramentas utilizadas
+
+- Visual Studio Code: edição do código.
+- Node.js: execução do programa JavaScript.
+- Git e GitHub: versionamento e armazenamento do código-fonte.
