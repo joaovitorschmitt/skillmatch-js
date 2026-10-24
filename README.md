@@ -47,3 +47,16 @@ Esta é uma simulação local: o projeto não utiliza uma API externa nem possui
 - Visual Studio Code: edição do código.
 - Node.js: execução do programa JavaScript.
 - Git e GitHub: versionamento e armazenamento do código-fonte.
+
+## Extensões do VS Code
+
+O projeto não depende de extensões específicas para funcionar. Como ferramentas opcionais de apoio, podem ser utilizadas:
+
+- Prettier - Code formatter: ajuda a manter a formatação do código consistente.
+- ESLint: ajuda a identificar possíveis problemas no JavaScript.
+
+## Vídeo de demonstração
+
+Link do vídeo: adicionar o link público após gravar a demonstração.
+
+O vídeo demonstrará a execução do SkillMatch, os resultados de compatibilidade, as habilidades faltantes, a recomendação de estudo e os principais conceitos de JavaScript utilizados.
