@@ -36,22 +36,23 @@ empresa: "Konoha Digital",
 habilidades: ["HTML", "CSS", "JavaScript"],
 },
 {
-nome: "Desenvolvedor Front-End Pleno",
+nome: "Desenvolvedor Front-End Junior - React",
 empresa: "Capsule Corp Labs",
 habilidades: ["HTML", "CSS", "JavaScript", "Git", "React"]
 },
 {
-nome: "Desenvolvedor Back-End Junior",
+nome: "Desenvolvedor Front-End Junior - Interfaces Responsivas",
 empresa: "Thousand Sunny Tech",
-habilidades: ["JavaScript", "Node.js", "SQL", "Git"],
+habilidades: ["HTML", "CSS", "JavaScript", "Git", "React", "Responsividade", "Acessibilidade"],
 }
 ];
 
 function carregarVagas() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (Array.isArray(vagas) && vagas.length > 0) {
-                resolve(vagas);
+            const existemVagas = Array.isArray(vagas) && vagas.length > 0;
+                if (existemVagas) {
+                    resolve(vagas);
             } else {
                 reject(new Error("Nenhuma vaga foi encontrada."));
             }
@@ -60,7 +61,9 @@ function carregarVagas() {
 }
 
 function processarVagas(listaVagas, callback) {
-    listaVagas.forEach(callback);
+    for (let i = 0; i < listaVagas.length; i++) {
+        callback(listaVagas[i]);
+    }
 }
 
 function criarContadorVagas() {
@@ -117,7 +120,7 @@ resultados.forEach(resultado => {
     console.log("------------------------------");
     console.log(`Vaga: ${resultado.nome}`);
     console.log(`Empresa: ${resultado.empresa}`);
-    console.log(`Compatibilidade: ${resultado.porcentagem}%`);
+    console.log(`Compatibilidade: ${resultado.porcentagem.toFixed(2)}%`);
     console.log(`Habilidades compatíveis: ${resultado.habilidadesCompativeis} de ${resultado.totalHabilidades}`);
     console.log(`Classificação: ${resultado.classificacao}`);
     if (resultado.habilidadesFaltantes.length > 0) {
@@ -133,7 +136,7 @@ const melhorVaga = resultados.find(resultado => resultado.classificacao === "Alt
 console.log("Melhor vaga para o candidato:");
 console.log(`Vaga: ${melhorVaga.nome}`);
 console.log(`Empresa: ${melhorVaga.empresa}`);
-console.log(`Compatibilidade: ${melhorVaga.porcentagem}%`);
+console.log(`Compatibilidade: ${melhorVaga.porcentagem.toFixed(2)}%`);
 
 
 const todasHabilidadesFaltantes = resultados.reduce((lista, resultado) => {
