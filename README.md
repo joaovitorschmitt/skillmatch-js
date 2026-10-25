@@ -5,7 +5,13 @@ O SkillMatch é um programa de simulação que compara as habilidades de um cand
 
 ## Como funciona o cálculo de compatibilidade
 
-O SkillMatch calcula a compatibilidade comparando as habilidades que o candidato possui com o total de habilidades exigidas por cada vaga. Por exemplo, na vaga de Desenvolvedor Front-End Pleno, o candidato possui 3 das 5 habilidades exigidas, resultando em 60% de compatibilidade. Com esse resultado, ele consegue identificar quais habilidades precisa estudar e desenvolver para se preparar melhor para essa oportunidade.
+O SkillMatch calcula a compatibilidade comparando as habilidades que o candidato possui com o total de habilidades exigidas por cada vaga. Por exemplo, na vaga de Desenvolvedor Front-End Junior - React, o candidato possui 3 das 5 habilidades exigidas, resultando em 60% de compatibilidade. Com esse resultado, ele consegue identificar quais habilidades precisa estudar e desenvolver para se preparar melhor para essa oportunidade.
+
+### Fórmula utilizada
+
+**Compatibilidade (%) = (quantidade de habilidades compatíveis / total de habilidades exigidas pela vaga) × 100**
+
+Escolhi essa regra porque ela é simples e permite comparar todas as vagas usando a mesma proporção. Por exemplo, se o candidato possui 3 das 5 habilidades exigidas, sua compatibilidade é de 60%.
 
 ## Classificação de compatibilidade
 
@@ -32,9 +38,21 @@ Para executar o SkillMatch, é necessário ter o Node.js instalado no computador
 **Tratamento de erros:** try/catch captura falhas durante o carregamento das vagas.
 **this:** acessa os atributos do objeto candidato dentro da classe.
 
+### Tipos de dados utilizados
+
+- **Strings:** armazenam o nome do candidato, a área de interesse, os nomes das empresas e os cargos.
+- **Números:** representam o tempo de experiência, as quantidades de habilidades e os percentuais de compatibilidade.
+- **Arrays:** armazenam as habilidades do candidato, os requisitos das vagas e os resultados da análise.
+- **Objetos:** representam o candidato, as vagas e os resultados de compatibilidade.
+- **Booleanos:** a variável existemVagas recebe true quando a lista contém vagas válidas e false quando a condição não é satisfeita.
+
 ## Como funciona a recomendação de estudo
 
 O programa reúne as habilidades que faltam nas vagas e conta quantas vezes cada habilidade aparece. A habilidade faltante mais frequente é priorizada para a recomendação de estudo. Assim, o candidato consegue identificar qual conhecimento pode ajudar a se preparar para mais oportunidades.
+
+## Como a internet funciona
+
+A internet conecta computadores e servidores por meio de redes. Quando um dispositivo solicita uma página ou dados, a requisição é enviada pela rede até um servidor, que retorna uma resposta. No SkillMatch, não fazemos uma requisição real: simulamos a espera pelo carregamento das vagas usando setTimeout(), Promise e async/await.
 
 ## Simulação da arquitetura cliente-servidor
 
@@ -60,3 +78,9 @@ O projeto não depende de extensões específicas para funcionar. Como ferrament
 Link do vídeo: adicionar o link público após gravar a demonstração.
 
 O vídeo demonstrará a execução do SkillMatch, os resultados de compatibilidade, as habilidades faltantes, a recomendação de estudo e os principais conceitos de JavaScript utilizados.
+
+## Declaração de variáveis em JavaScript
+
+**const:** utilizada quando a variável não precisa receber outra atribuição, como nas referências às listas e aos resultados.
+**let:** utilizada quando o valor precisa ser atualizado, como no contador de vagas e na classificação.
+**var:** possui escopo de função e permite redeclaração. Neste projeto, priorizei let e const para deixar o controle das variáveis mais claro.
