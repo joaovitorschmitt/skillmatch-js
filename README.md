@@ -89,4 +89,4 @@ O vídeo demonstrará a execução do SkillMatch, os resultados de compatibilida
 
 Assista à demonstração do projeto SkillMatch JS:
 
-[▶️ Assistir ao vídeo no Google Drive](https://drive.google.com/file/d/13plPhmiUtZHZDmyRUtc7PAaJjOneVb5g/view?usp=sharing)
+[▶️ Assistir ao vídeo no Google Drive](https://youtu.be/tTCtQONzy4c)
