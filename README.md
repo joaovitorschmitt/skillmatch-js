@@ -85,6 +85,10 @@ O vídeo demonstrará a execução do SkillMatch, os resultados de compatibilida
 **let:** utilizada quando o valor precisa ser atualizado, como no contador de vagas e na classificação.
 **var:** possui escopo de função e permite redeclaração. Neste projeto, priorizei let e const para deixar o controle das variáveis mais claro.
 
+## Quadro Kanban (Trello)
+
+[Acessar o quadro Kanban do SkillMatch JS](https://trello.com/b/6G23vgRG/board-skillmatch-js-project)
+
 ## Vídeo de apresentação
 
 Assista à demonstração do projeto SkillMatch JS:
