@@ -84,3 +84,9 @@ O vídeo demonstrará a execução do SkillMatch, os resultados de compatibilida
 **const:** utilizada quando a variável não precisa receber outra atribuição, como nas referências às listas e aos resultados.
 **let:** utilizada quando o valor precisa ser atualizado, como no contador de vagas e na classificação.
 **var:** possui escopo de função e permite redeclaração. Neste projeto, priorizei let e const para deixar o controle das variáveis mais claro.
+
+## Vídeo de apresentação
+
+Assista à demonstração do projeto SkillMatch JS:
+
+[▶️ Assistir ao vídeo no Google Drive](https://drive.google.com/file/d/13plPhmiUtZHZDmyRUtc7PAaJjOneVb5g/view?usp=sharing)
